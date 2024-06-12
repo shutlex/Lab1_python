@@ -1,16 +1,43 @@
-# This is a sample Python script.
+var1 = int(input("Введіть ціле число для змінної var1: "))
+var2 = float(input("Введіть дробове число для змінної var2: "))
+var3 = int(input("Введіть ціле число для змінної var3: "))
+var4 = float(input("Введіть дробове число для змінної var4: "))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+addition = var1 + var2 + var3 + var4
 
+subtraction = var1 - var2 - var3 - var4
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+multiplication = var1 * var2 * var3 * var4
 
+division1 = var1 / var2
+division2 = var3 / var4
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+power1 = var1 ** var2
+power2 = var3 ** var4
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+integer_division = var1 // var3
+
+modulus = var1 % var3
+
+results = [addition, subtraction, multiplication, division1, division2, power1, power2, integer_division, modulus]
+
+count_elements = len(results)
+print(f"Кількість елементів у списку: {count_elements}")
+
+print("Парні елементи списку:")
+for element in results:
+    if isinstance(element, int) and element % 2 == 0:
+        print(element)
+
+results[1], results[4] = results[4], results[1]
+print("Список після зміни:")
+print(results)
+
+name = input("Введіть ваше прізвище та ім’я: ")
+
+print("Виконавець даної лабораторної роботи:")
+print(name)
+print("Висновки:")
+print("1. Навчились працювати зі змінними та функцією input.")
+print("2. Застосували основні арифметичні операції на змінних.")
+print("3. Виконали маніпуляції з елементами списку.")
